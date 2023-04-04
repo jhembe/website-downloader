@@ -10,15 +10,20 @@ A Python script to download a website and store it locally for offline access.
 ## Installation
 
 1. Clone or download this repository to your local machine.
+
+    ```bash
+    git clone https://github.com/jhembe/website-downloader.git
+    ```
+
 2. Install the required dependencies by running the following command in your terminal:
 
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
-To download a website, run the `download_website.py` script and provide the URL of the website you want to download, as well as the directory where you want to save the downloaded files:
+To download a website, run the `download_website.py`, you'll be asked to provide the URL of the website you want to download, as well as the size of data you want to download (for v1 variant)
 
 ```bash
 python download_website.py
@@ -28,9 +33,8 @@ The script will display a progress bar as the website is being downloaded. If th
 
 By default, the script will download the entire website. If you want to limit the download size, you can provide a maximum size (in megabytes) using the following command:
 
-```bash
-python download_website.py 
-```
+![A Screenshot](./assets/screen.png)
+
 
 ## Example
 
