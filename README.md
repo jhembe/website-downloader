@@ -12,31 +12,33 @@ A Python script to download a website and store it locally for offline access.
 1. Clone or download this repository to your local machine.
 2. Install the required dependencies by running the following command in your terminal:
 
-`
+```bash
 pip install -r requirements.txt
+```
 
 ## Usage
 
 To download a website, run the `download_website.py` script and provide the URL of the website you want to download, as well as the directory where you want to save the downloaded files:
 
-`
+```bash
 python download_website.py
+```
 
 The script will display a progress bar as the website is being downloaded. If the download is interrupted for any reason, you can resume it by running the same command again.
 
 By default, the script will download the entire website. If you want to limit the download size, you can provide a maximum size (in megabytes) using the following command:
 
-``bash
-python download_website.py --max-size <size>
-
-Replace `<size>` with the maximum size you want to allow for the download.
+```bash
+python download_website.py 
+```
 
 ## Example
 
 To download my accessquote site and save it to the directory `/home/user/{username}/localWebsites`, run the following command:
 
-`
+```bash
 python download_website.py
+```
 
 ## Contributing
 
