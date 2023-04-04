@@ -18,7 +18,20 @@ A Python script to download a website and store it locally for offline access.
 2. Install the required dependencies by running the following command in your terminal:
 
     ```bash
-    pip install -r requirements.txt
+    cd website-downloader
+    ```
+
+    ```bash
+    pip install pipenv
+    ```
+
+    ```bash
+    pipenv install
+
+    ```
+
+    ```bash
+    pipenv shell
     ```
 
 ## Usage
