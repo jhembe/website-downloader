@@ -12,14 +12,14 @@ A Python script to download a website and store it locally for offline access.
 1. Clone or download this repository to your local machine.
 2. Install the required dependencies by running the following command in your terminal:
 
-``bash
+`
 pip install -r requirements.txt
 
 ## Usage
 
 To download a website, run the `download_website.py` script and provide the URL of the website you want to download, as well as the directory where you want to save the downloaded files:
 
-``bash
+`
 python download_website.py
 
 The script will display a progress bar as the website is being downloaded. If the download is interrupted for any reason, you can resume it by running the same command again.
@@ -33,14 +33,10 @@ Replace `<size>` with the maximum size you want to allow for the download.
 
 ## Example
 
-To download the OpenAI homepage and save it to the directory `/home/user/Downloads/OpenAI`, run the following command:
+To download my accessquote site and save it to the directory `/home/user/{username}/localWebsites`, run the following command:
 
-``bash
-python download_website.py --url https://accessquote.netlify.app/ --output /home/user/Downloads/OpenAI
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+`
+python download_website.py
 
 ## Contributing
 
@@ -59,4 +55,4 @@ Please be aware that downloading websites without permission may violate copyrig
 
 ## Contact
 
-If you have any questions or comments about this project, please feel free to contact me at [your-email@example.com](mailto:your-email@example.com).
+If you have any questions or comments about this project, please feel free to contact me at [jhembe202@gmail.com](mailto:jhembe202@gmail.com).
