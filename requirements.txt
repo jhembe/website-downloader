@@ -1,4 +1,0 @@
-wget
-tqdm
-beautifulsoup4
-requests
