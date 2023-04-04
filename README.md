@@ -65,8 +65,11 @@ Contributions are welcome! If you find a bug or have a feature request, please o
 
 This project uses the following open source libraries:
 
-- [wget](https://pypi.org/project/wget/) - For downloading the website files.
+- [requests](https://pypi.org/project/requests/) - For downloading the website files.
 - [tqdm](https://pypi.org/project/tqdm/) - For displaying the progress bar.
+- [beautifulsoup4](https://pypi.org/project/beautifulsoup4/) - For parsing HTML and XML documents.
+- [certifi](https://pypi.org/project/certifi/) - For providing Mozilla's CA Bundle for SSL verification.
+- [charset-normalizer](https://pypi.org/project/charset-normalizer/) - For detecting the character encoding of downloaded content.
 
 ## Disclaimer
 
