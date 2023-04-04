@@ -32,7 +32,7 @@ def download_website(url, output_dir, max_size=None):
         with subprocess.Popen(command, stdout=subprocess.PIPE,
                               bufsize=1, universal_newlines=True) as process:
             total_size = 0
-            for line in process.stdout:
+            for line in process.stdout or []:
                 # Parse the output of wget to update the progress bar
                 if line.startswith('Length:'):
                     total_size = int(line.split()[1])
@@ -42,6 +42,13 @@ def download_website(url, output_dir, max_size=None):
                     progress = int(line.split()[1][:-1])
                     if total_size > 0:
                         pbar.update(progress - pbar.n)
+            # Fix for "object of type NoneType cannot be iterable" error
+            # for line in process.stdout or []:
+            #     if line.startswith('Length:'):
+            #         match = re.search(r'\d+', line)
+            #         if match:
+            #             file_size = int(match.group()) / (1024 * 1024)
+            #             break
 
             # Write the resume file if the download was successful
             if process.returncode == 0:
@@ -50,8 +57,9 @@ def download_website(url, output_dir, max_size=None):
                 pbar.close()
                 print(f"Website downloaded successfully to {output_dir}")
             else:
-                with open(resume_file, 'w') as f:
-                    f.write(file_name)
+                if file_name is not None:
+                    with open(resume_file, 'w') as f:
+                        f.write(file_name)
                 print("Website download failed. Use the same command to resume download from where it stopped")
     except subprocess.CalledProcessError as e:
         print("Website download failed. Error:", e)
