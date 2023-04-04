@@ -1,6 +1,5 @@
 import os
 import requests
-import getpass
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, urljoin
 from tqdm import tqdm
@@ -128,9 +127,7 @@ def download_resource(url, output_dir, processed_urls, skipped_extensions):
             f.write(response.content)
 
 if __name__ == '__main__':
-    user_name = getpass.getuser()
     url = input("Enter website URL: ")
-    # output_dir = '/home/{username}/localWebSites'
-    output_dir = f'/home/{user_name}/localWebSites'
+    output_dir = '/home/jhembe/localWebSites'
 
     download_website(url, output_dir)

@@ -1,2 +1,3 @@
 wget
 tqdm
+beautifulsoup4

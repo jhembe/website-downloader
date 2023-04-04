@@ -36,7 +36,7 @@ Replace `<size>` with the maximum size you want to allow for the download.
 To download the OpenAI homepage and save it to the directory `/home/user/Downloads/OpenAI`, run the following command:
 
 ``bash
-python download_website.py --url https://openai.com/ --output /home/user/Downloads/OpenAI
+python download_website.py --url https://accessquote.netlify.app/ --output /home/user/Downloads/OpenAI
 
 ## License
 

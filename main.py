@@ -5,6 +5,7 @@ import sys
 from tqdm import tqdm
 
 def download_website(url, output_dir, max_size=None):
+    file_name = None
     # Create the output directory if it doesn't exist
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -27,7 +28,7 @@ def download_website(url, output_dir, max_size=None):
         # Otherwise, start a new download
         command += ['--progress=dot:mega', '-o', '/dev/null', url]
 
-    file_name = None
+    # file_name = None
 
     try:
         # Execute the wget command, displaying a progress bar
@@ -43,7 +44,7 @@ def download_website(url, output_dir, max_size=None):
                 elif line.startswith('Progress:'):
                     progress = int(line.split()[1][:-1])
                     if total_size > 0:
-                        pbar.update(progress - pbar.n)
+                        pbar.update(progress)
 
             # Write the resume file if the download was successful
             if process.returncode == 0:
